@@ -6,9 +6,51 @@
 </head>
 
 <body>
+
 <h1>Gap Matrix System</h1>
-<p>
-  Gap Matrix System (GMS) is an ordinal notation system created by me. I'll explain how it works later, I think I forgot smth in the css...
-</p>
+
+<div class="box">
+  <h2>Introduction</h2>
+
+  <p>
+    Gap Matrix System (GMS) is an ordinal notation system created by me. My main inspiration for this project is <a href="https://googology.fandom.com/wiki/Bashicu_matrix_system">Bashicu Matrix System</a> (BMS), in particular, <a href="https://arxiv.org/abs/2307.04606">Yto's proof of termination of BMS</a>. BMS is an expansion-based ordinal notation. Terms in BMS are x &times; y matrices of natural numbers for naturals x and y. I'll write these matrices as BMS(a<sub>11</sub>,...,a<sub>1y</sub>)...(a<sub>x1</sub>,...,a<sub>xy</sub>). Yto shows in the proof a connection between BMS and <a href="https://googology.fandom.com/wiki/Stable_ordinal">stable ordinals</a>. Stability is a concept in set theory, defined as follows:
+  </p>
+
+  <p class="q">
+    <b>[Definition 1]</b> For positive natural n and ordinals &alpha; and &beta;, &alpha; is said to be &Sigma;<sub>n</sub>-&beta;-stable iff L<sub>&alpha;</sub> &prec;<sub>&Sigma;<sub>n</sub></sub> &beta;.
+  </p>
+
+  <p>
+    I.e. for all &Sigma;<sub>n</sub>-sentences &varphi; with parameters from L<sub>&alpha;</sub>, L<sub>&alpha;</sub> &models; &varphi; iff L<sub>&beta;</sub> &models; &varphi;. Let &alpha; &prec;<sub>n</sub> &beta; denote that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable. Yto showed in their proof in lemma 2.6 that for all positive naturals n, all ordinals &alpha; and &beta; so that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable and all finite sets &X; &sub; &beta;, there is some finite set &Y; &sub; &alpha; and a mapping f: &X; &rightarrow; &Y; so that:
+  </p>
+
+  <ol>
+    <li>For all x &isinv; X &cap; &alpha;, x = f(x);</li>
+    <li>For all x,y &isinv; X, x &lt; y iff f(x) &lt; f(y);</li>
+    <li>For all x,y &isinv; X and all positive naturals k, x &prec;<sub>k</sub> y iff f(x) &prec;<sub>k</sub> f(y);</li>
+    <li>For all x,y &isinv; X and all positive naturals m &lt; n, x &prec;<sub>m</sub> &beta; iff f(x) &prec;<sub>m</sub> &alpha;.</li>
+  </ol>
+
+  <p>
+    (The exact lemma they proved is a little different but equivalent.) You might notice that this is similar to patterns of resemblance, but you probably don't because you don't know what that is. One can define a notion similar to that of patterns of resemblance that mimics stability:
+  </p>
+
+  <p class="q">
+    <b>[Definition 2]</b> For positive natural n and ordinals &alpha; and &beta;, &alpha; &lt;<sub>n</sub> &beta; iff (&alpha;, &lt;, &lt;<sub>k</sub>, &lt;<sub>m</sub> &alpha;)<sub>0&lt;k&lt;&omega;, 0&lt;m&lt;n</sub> &prec;<sub>&Sigma;<sub>1</sub></sub> (&beta;, &lt;, &lt;<sub>k</sub>, &lt;<sub>m</sub> &beta;)<sub>0&lt;k&lt;&omega;, 0&lt;m&lt;n</sub>.
+  </p>
+
+  <p>
+    I.e. for all finite sets X &sub; &beta;, there is a finite set Y &sub; &alpha; so that (Y, &lt;, &lt;<sub>k</sub>, &lt;<sub>m</sub> &alpha;)<sub>0&lt;k&lt;&omega;, 0&lt;m&lt;n</sub> is topologically equivalent to (X, &lt;, &lt;<sub>k</sub>, &lt;<sub>m</sub> &beta;)<sub>0&lt;k&lt;&omega;, 0&lt;m&lt;n</sub>: there exists a homeomorphism f: X &rightarrow; Y between them. I tried to make transfinite extension of this, which eventually brought me to this ternary relation:
+  </p>
+  
+  <p class="q">
+    <b>[Definition 3]</b> For ordinals &alpha;, &beta; and &gamma; so that &alpha; &le; &beta; &le; &gamma;, R(&alpha;,&beta;,&gamma;) iff (&beta;, &alpha;, &lt;, R) &PrecedesSlantEqual;<sub>&Sigma;<sub>1</sub></sub> (&gamma;, &beta;, &lt;, R).
+  </p>
+
+  <p>
+    You might notice that the relation R(&alpha;,&beta;,&beta;+n) for naturals n is similar to &alpha; &lt;<sub>n+1</sub> &beta;. Terms in my ordinal notation are matrices of numbers with 3 rows so that each column (z,y,x) denotes an ordinal f(z) and a relation R(f(x),f(y),f(z)), and the expansion algorithm is based on reflection principles of R.
+  </p>
+</div>
+
 </body>
 </html>
