@@ -5,6 +5,16 @@
     --shadow: 0px 0px 16px #fff6;
 }
 
+a {
+    color: var(--col);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+    text-shadow: var(--shadow);
+}
+
 body {
     background: var(--bg);
     color: var(--col);
@@ -12,13 +22,17 @@ body {
     margin: 24px;
 }
 
+.box {
+    border: 3px #fff solid;
+    box-shadow: var(--shadow);
+    padding: 24px;
+}
+
 h1, h2 {
     text-align: center;
     text-shadow: var(--shadow);
 }
 
-.box {
-    border: 3px #fff solid;
-    box-shadow: var(--shadow);
-    padding: 24px;
+.q {
+    padding-left: 24px;
 }
