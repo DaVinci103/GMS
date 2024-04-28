@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2 {
-    text-aling: center;
+    text-align: center;
     text-shadow: var(--shadow);
 }
 
