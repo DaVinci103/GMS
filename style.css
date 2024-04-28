@@ -1,0 +1,17 @@
+:root {
+    --bg: #000;
+    --col: #fff;
+    --font: "Trebuchet MS";
+    --shadow: 0px 0px 5px "#fffc";
+}
+
+body {
+    background: var(--bg);
+    color: var(--col);
+    font: var(--font);
+    margin: 32px;
+}
+
+h1 {
+    text-shadow: var(--shadow);
+}
