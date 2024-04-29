@@ -31,7 +31,7 @@ function calc() {
     let val = $("#M").val();
     let M = val.slice(1, val.length - 1).split(")(").map(col => col.split(",").map(x => Number(x)));
     let n = Number($("#n").val());
-    $("#expanded").text(GMS(M, n).map(col => "(" + col.join(",") + ")"));
+    $("#expanded").text(GMS(M, n).map(col => "(" + col.join(",") + ")").join());
 }
 
 $(document).ready(function () {
