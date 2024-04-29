@@ -29,6 +29,24 @@ body {
     padding: 24px;
 }
 
+button {
+    background: var(--col);
+    border: 1px var(--col) solid;
+    box-shadow: var(--shadow);
+    color: var(--bg);
+    font-family: var(--font);
+}
+
+button:hover {
+    background: var(--bg);
+    color: var(--col);
+}
+
+button:active {
+    background: var(--col);
+    color: var(--bg);
+}
+
 h1, h2 {
     text-align: center;
     text-shadow: var(--shadow);
@@ -36,6 +54,14 @@ h1, h2 {
 
 html {
     scroll-behavior: smooth;
+}
+
+input {
+    background: var(--bg);
+    border: 1px var(--col) solid;
+    box-shadow: var(--shadow);
+    color: var(--col);
+    font-family: var(--font);
 }
 
 .q {
