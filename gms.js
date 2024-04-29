@@ -28,7 +28,8 @@ function GMS(M, n) {
 }
 
 function calc() {
-    let M = $("#M").val().slice(1, val.length - 1).split(")(").map(col => col.split(",").map(x => Number(x)));
+    let val = $("#M").val();
+    let M = val.slice(1, val.length - 1).split(")(").map(col => col.split(",").map(x => Number(x)));
     let n = Number($("#n").val());
     $("#expanded").text(GMS(M, s).map(col => "(" + col.join(",") + ")"));
 }
