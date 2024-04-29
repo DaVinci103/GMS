@@ -7,10 +7,12 @@
 
 <body>
 
-<h1>Gap Matrix System</h1>
+<h1 id="0">Gap Matrix System <a href="#0">#</a></h1>
+
+
 
 <div class="box">
-  <h2>Introduction</h2>
+  <h2 id="1">Introduction <a href="#1">#</a></h2>
 
   <p>
     Gap Matrix System (GMS) is an ordinal notation system created by me. My main inspiration for this project is <a href="https://googology.fandom.com/wiki/Bashicu_matrix_system">Bashicu Matrix System</a> (BMS), in particular, <a href="https://arxiv.org/abs/2307.04606">Yto's proof of termination of BMS</a>. BMS is an expansion-based ordinal notation. Terms in BMS are x &times; y matrices of natural numbers for naturals x and y. I'll write these matrices as BMS(a<sub>11</sub>,...,a<sub>1y</sub>)...(a<sub>x1</sub>,...,a<sub>xy</sub>). Yto shows in the proof a connection between BMS and <a href="https://googology.fandom.com/wiki/Stable_ordinal">stable ordinals</a>. Stability is a concept in set theory, defined as follows:
@@ -21,7 +23,7 @@
   </p>
 
   <p>
-    I.e. for all &Sigma;<sub>n</sub>-sentences &varphi; with parameters from L<sub>&alpha;</sub>, L<sub>&alpha;</sub> &models; &varphi; iff L<sub>&beta;</sub> &models; &varphi;. Let &alpha; &prec;<sub>n</sub> &beta; denote that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable. Yto showed in their proof in lemma 2.6 that for all positive naturals n, all ordinals &alpha; and &beta; so that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable and all finite sets &X; &sub; &beta;, there is some finite set &Y; &sub; &alpha; and a mapping f: &X; &rightarrow; &Y; so that:
+    I.e. for all &Sigma;<sub>n</sub>-sentences &varphi; with parameters from L<sub>&alpha;</sub>, L<sub>&alpha;</sub> &models; &varphi; iff L<sub>&beta;</sub> &models; &varphi;. Let &alpha; &prec;<sub>n</sub> &beta; denote that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable. Yto showed in their proof in lemma 2.6 that for all positive naturals n, all ordinals &alpha; and &beta; so that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable and all finite sets X &sub; &beta;, there is some finite set Y &sub; &alpha; and a mapping f: X &rightarrow; Y so that:
   </p>
 
   <ol>
@@ -49,6 +51,39 @@
 
   <p>
     You might notice that the relation R(&alpha;,&beta;,&beta;+n) for naturals n is similar to &alpha; &lt;<sub>n+1</sub> &beta;. Terms in my ordinal notation are matrices of numbers with 3 rows so that each column (z,y,x) denotes an ordinal f(z) and a relation R(f(x),f(y),f(z)), and the expansion algorithm is based on reflection principles of R.
+  </p>
+</div>
+
+
+
+<div>
+  <h2 id="2">Definition <a href="#2">#</a></h2>
+
+  <p>
+    For matrices X and Y, X + Y denotes the concatenation of X and Y. A term in GMS is an l &times; 3 matrix M of natural numbers for some natural l with the following properties:
+  </p>
+
+  <ol>
+    <li>M the top row of M is monotonically increasing from 0 (0, 1, 2, ...);</li>
+    <li>Each column (z,y,x) of M is non-strictly decreasing (x &le; y &le; z).</li>
+  </ol>
+
+  <p>
+    For natural x &lt; l, the x<sup>th</sup> column of M refers to the unique column with x in the top row. For naturals x,y &lt; l, the part of M from x to y refers to the part of M starting at, including, the x<sup>th</sup> column up to, excluding, the y<sup>th</sup> column. For x = y, this refers to the empty matrix. For natural n, the expansion of M with respect to n, denoted M[n], is defined as follows:
+  </p>
+
+  <p>
+    Let (c,b,a) be the last column of M. Let A be the part of M from 0 to a, let B be the part of M from a to b and let C be the part of M from b to c. Note that A + B + C is M without its last column. Let k be a natural number. For b = c, k := b - a, for b &ne; c, k := c - a - 1. Let D be a k &times; 3 matrix. For b = c, D := B, for b &ne; c, D := B' + C where B' is B with the left-most column removed. For each 0 &le; i &lt; n, let D<sub>i</sub> be a k &times; 3 matrix. D<sub>i</sub> is D with each natural number x replaced with x', defined as:
+  </p>
+
+  <ol>
+    <li>For x &lt; a, x' := x;</li>
+    <li>For x = a, x' := ki + x + b - a;</li>
+    <li>For x &gt; a, x' = ki + x + k.</li>
+  </ol>
+
+  <p>
+    M[n] is then defined as A + B + C + D<sub>0</sub> + ... + D<sub>n-1</sub>.
   </p>
 </div>
 
