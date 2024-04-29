@@ -34,6 +34,10 @@ h1, h2 {
     text-shadow: var(--shadow);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .q {
     padding-left: 24px;
 }
