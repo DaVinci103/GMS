@@ -24,7 +24,7 @@ function GMS(M, n) {
         x === a ? k * i + x + b - a :
         k * i + x + k));
 
-    return [...A, ...B, ...C, Array(n).fill().map((_, i) => De(i)).flat()];
+    return [...A, ...B, ...C, ...Array(n).fill().map((_, i) => De(i)).flat()];
 }
 
 function calc() {
