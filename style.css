@@ -25,6 +25,7 @@ body {
 .box {
     border: 3px #fff solid;
     box-shadow: var(--shadow);
+    margin-top: 24px;
     padding: 24px;
 }
 
