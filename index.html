@@ -73,17 +73,7 @@
   </p>
 
   <p>
-    Let (c,b,a) be the last column of M. Let A be the part of M from 0 to a, let B be the part of M from a to b and let C be the part of M from b to c. Note that A + B + C is M without its last column. Let k be a natural number. For b = c, k := b - a, for b &ne; c, k := c - a - 1. Let D be a k &times; 3 matrix. For b = c, D := B, for b &ne; c, D := B' + C where B' is B with the left-most column removed. For each 0 &le; i &lt; n, let D<sub>i</sub> be a k &times; 3 matrix. D<sub>i</sub> is D with each natural number x replaced with x', defined as:
-  </p>
-
-  <ol>
-    <li>For x &lt; a, x' := x;</li>
-    <li>For x = a, x' := ki + x + b - a;</li>
-    <li>For x &gt; a, x' = ki + x + k.</li>
-  </ol>
-
-  <p>
-    M[n] is then defined as A + B + C + D<sub>0</sub> + ... + D<sub>n-1</sub>.
+    Let (c,b,a) be the last column of M. Let A be the part of M from 0 to a, let B be the part of M from a to b and let C be the part of M from b to c. Note that A + B + C is M without its last column. Let k = c - a and D = B. If b &neq; c, decrease k by 1, remove the left-most column of D and add C to the end of D. For each 0 &le; i &lt; n, let D<sub>i</sub> be a k &times; 3 matrix. D<sub>i</sub> is D with every instance of a number x > a increased by ki and every instance of a replaced with b + ki. M[n] is then defined as A + B + C + D<sub>0</sub> + ... + D<sub>n-1</sub>.
   </p>
 
   <p>
