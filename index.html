@@ -7,15 +7,15 @@
 
 <body>
 
-<h1 id="0">Gap Matrix System <a href="#0">#</a></h1>
+<h1 id="gap-matrix-system">Gap Matrix System <a href="#gap-matrix-system">#</a></h1>
 
 
 
 <div class="box">
-  <h2 id="1">Introduction <a href="#1">#</a></h2>
+  <h2 id="introduction">Introduction <a href="#introduction">#</a></h2>
 
   <p>
-    Gap Matrix System (GMS) is an ordinal notation system created by me. My main inspiration for this project is <a href="https://googology.fandom.com/wiki/Bashicu_matrix_system">Bashicu Matrix System</a> (BMS), in particular, <a href="https://arxiv.org/abs/2307.04606">Yto's proof of termination of BMS</a>. BMS is an expansion-based ordinal notation. Terms in BMS are x &times; y matrices of natural numbers for naturals x and y. I'll write these matrices as BMS(a<sub>11</sub>,...,a<sub>1y</sub>)...(a<sub>x1</sub>,...,a<sub>xy</sub>). Yto shows in the proof a connection between BMS and <a href="https://googology.fandom.com/wiki/Stable_ordinal">stable ordinals</a>. Stability is a concept in set theory, defined as follows:
+    Gap Matrix System (GMS) is an ordinal notation system created by me (DV103). My main inspiration for this project is <a href="https://googology.fandom.com/wiki/Bashicu_matrix_system">Bashicu Matrix System</a> (BMS), in particular, <a href="https://arxiv.org/abs/2307.04606">Yto's proof of termination of BMS</a>. BMS is an expansion-based ordinal notation. Terms in BMS are x &times; y matrices of natural numbers for naturals x and y. I'll write these matrices as BMS(a<sub>11</sub>,...,a<sub>1y</sub>)...(a<sub>x1</sub>,...,a<sub>xy</sub>). Yto shows in the proof a connection between BMS and <a href="https://googology.fandom.com/wiki/Stable_ordinal">stable ordinals</a>. Stability is a concept in set theory, defined as follows:
   </p>
 
   <p class="q">
@@ -46,7 +46,7 @@
   </p>
   
   <p class="q">
-    <b>[Definition 3]</b> For ordinals &alpha;, &beta; and &gamma; so that &alpha; &le; &beta; &le; &gamma;, R(&alpha;,&beta;,&gamma;) iff (&beta;, &alpha;, &lt;, R) &PrecedesSlantEqual;<sub>&Sigma;<sub>1</sub></sub> (&gamma;, &beta;, &lt;, R).
+    <b>[Definition 3]</b> For ordinals &alpha;, &beta; and &gamma; so that &alpha; &le; &beta; &le; &gamma;, R(&alpha;,&beta;,&gamma;) iff (&beta;, &alpha;, &lt;, R) &PrecedesSlantEqual;<sub>&Sigma;<sub>1</sub>(&alpha;)</sub> (&gamma;, &beta;, &lt;, R).
   </p>
 
   <p>
@@ -57,14 +57,14 @@
 
 
 <div class="box">
-  <h2 id="2">Definition <a href="#2">#</a></h2>
+  <h2 id="definition">Definition <a href="#definition">#</a></h2>
 
   <p>
     For matrices X and Y, X + Y denotes the concatenation of X and Y. A term in GMS is an l &times; 3 matrix M of natural numbers for some natural l with the following properties:
   </p>
 
   <ol>
-    <li>M the top row of M is monotonically increasing from 0 (0, 1, 2, ...);</li>
+    <li>The top row of M is monotonically increasing from 0 (0, 1, 2, ...);</li>
     <li>Each column (z,y,x) of M is non-strictly decreasing (x &le; y &le; z).</li>
   </ol>
 
@@ -86,13 +86,15 @@
     M[n] is then defined as A + B + C + D<sub>0</sub> + ... + D<sub>n-1</sub>.
   </p>
 
-  <p>Let o be a mapping from GMS terms to ordinals. For GMS term M, if M is empty then o M := 0, if M is not empty then o M := sup{o M[n] | n &lt; &omega;}. I coin the ordinal o (0,0,0)(1,1,0)(2,1,0)(3,2,1) as Large.</p>
+  <p>
+    Let o be a mapping from GMS terms to ordinals. For GMS term M, if M is empty then o M := 0, if M is not empty then o M := sup{o M[n] | n &lt; &omega;}. I coin the ordinal o (0,0,0)(1,1,0)(2,1,0)(3,2,1) as Large. I expect Large to correspond with the PTO of KP<sub>0</sub> augmented by the existence of unboundedly many regular cardinals.
+  </p>
 </div>
 
 
 
 <div class="box">
-  <h2 id="3">Calculator <a href="#3">#</a></h2>
+  <h2 id="calculator">Calculator <a href="#calculator">#</a></h2>
 
   <p><input id="M" placeholder="(0,0,0)(1,1,0)(2,1,0)(3,2,1)">[<input id="n" size="1">]</p>
 
