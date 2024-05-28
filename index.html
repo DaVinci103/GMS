@@ -73,7 +73,7 @@
   </p>
 
   <p>
-    Let (c,b,a) be the last column of M. Let A be the part of M from 0 to a, let B be the part of M from a to b and let C be the part of M from b to c. Note that A + B + C is M without its last column. Let k = c - a and D = B. If b &ne; c, decrease k by 1, remove the left-most column of D and add C to the end of D. For each 0 &le; i &lt; n, let D<sub>i</sub> be a k &times; 3 matrix. D<sub>i</sub> is D with every instance of a number x > a increased by ki and every instance of a replaced with b + ki. M[n] is then defined as A + B + C + D<sub>0</sub> + ... + D<sub>n-1</sub>.
+    Let (c,b,a) be the last column of M. Let A be the part of M from 0 to a, let B be the part of M from a to b and let C be the part of M from b to c. Note that A + B + C is M without its last column. Let k = c - a and D = B. If b &ne; c, decrease k by 1, remove the left-most column of D and add C to the end of D. For each 0 &le; i &lt; n, let D<sub>i</sub> be a k &times; 3 matrix. D<sub>i</sub> is D with every instance of a number x > a increased by ki + k and every instance of a replaced with b + ki. M[n] is then defined as A + B + C + D<sub>0</sub> + ... + D<sub>n-1</sub>.
   </p>
 
   <p>
