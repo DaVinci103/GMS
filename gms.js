@@ -12,7 +12,7 @@ function GMS(M, n) {
     
     let k, D;
     if (b === c) {
-        k = b - a;
+        k = c - a;
         D = B;
     } else {
         k = c - a - 1;
@@ -21,7 +21,7 @@ function GMS(M, n) {
     
     De = i => D.map(col => col.map(x =>
         x < a ? x :
-        x === a ? k * i + x + b - a :
+        x === a ? k * i + b :
         k * i + x + k));
 
     return [...A, ...B, ...C, ...Array(n).fill().map((_, i) => De(i)).flat()];
