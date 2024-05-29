@@ -23,7 +23,7 @@
   </p>
 
   <p>
-    I.e. for all &Sigma;<sub>n</sub>-sentences &varphi; with parameters from L<sub>&alpha;</sub>, L<sub>&alpha;</sub> &models; &varphi; iff L<sub>&beta;</sub> &models; &varphi;. Let &alpha; &prec;<sub>n</sub> &beta; denote that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable. Yto showed in their proof in lemma 2.6 that for all positive naturals n, all ordinals &alpha; and &beta; so that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable and all finite sets X &sub; &beta;, there is some finite set Y &sub; &alpha; and a mapping f: X &rightarrow; Y so that:
+    I.e. for all &Sigma;<sub>n</sub>-sentences &varphi; with parameters from L<sub>&alpha;</sub>, L<sub>&alpha;</sub> &models; &varphi; iff L<sub>&beta;</sub> &models; &varphi;. Let &alpha; &prec;<sub>n</sub> &beta; denote that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable. Yto showed in her proof in lemma 2.6 that for all positive naturals n, all ordinals &alpha; and &beta; so that &alpha; is &Sigma;<sub>n</sub>-&beta;-stable and all finite sets X &sub; &beta;, there is some finite set Y &sub; &alpha; and a mapping f: X &rightarrow; Y so that:
   </p>
 
   <ol>
@@ -34,7 +34,7 @@
   </ol>
 
   <p>
-    (The exact lemma they proved is a little different but equivalent.) You might notice that this is similar to patterns of resemblance, but you probably don't because you don't know what that is. One can define a notion similar to that of patterns of resemblance that mimics stability:
+    (The exact lemma she proved is a little different but equivalent.) You might notice that this is similar to patterns of resemblance, but you probably don't because you don't know what that is. One can define a notion similar to that of patterns of resemblance that mimics stability:
   </p>
 
   <p class="q">
@@ -77,7 +77,11 @@
   </p>
 
   <p>
-    Let o be a mapping from GMS terms to ordinals. For GMS term M, if M is empty then o M := 0, if M is not empty then o M := sup{o M[n] | n &lt; &omega;}. I coin the ordinal o (0,0,0)(1,1,0)(2,1,0)(3,2,1) as Large. I expect Large to correspond with the PTO of KP<sub>0</sub> augmented by the existence of unboundedly many regular cardinals.
+    Let o be a mapping from GMS terms to ordinals. For GMS term M, if M is empty then o M := 0, if M is not empty then o M := sup{o M[n] | n &lt; &omega;}. I coin the ordinal o (0,0,0)(1,1,0)(2,1,0)(3,2,1) as Large. I expect Large to correspond with the PTO of KP<sub>0</sub> augmented by the axiom of powerset (not to be confused with KPP<sub>0</sub>, which has stronger sepparation and comprehension).
+  </p>
+
+  <p>
+    GMS terms can be abbreviated. Abbreviations for GMS terms are made by removing duplicate elements from a column, replacing paretheses with spaces, removing the comma's and renaming multi-digit numbers to a single character if needed, e.g. (0,0,0)(1,1,0)(2,1,0)(3,2,1)(4,2,0)(5,5,4)(6,6,6)(7,7,6)(8,7,6)(9,7,6)(10,7,6)(11,11,6) &rightarrow; 0 10 210 321 420 54 6 76 876 976 A76 B6. GMS terms are ordered lexicographically using the abbreviations as described above, e.g. (0,0,0)(1,1,1) &lt; (0,0,0)(1,1,0) as 0 1 < 0 10 lexicographically. For a column (z,y,x) with x &ne; y of a GMS term M, call the parent of (z,y,x) the x<sup>th</sup> column for y = z and the y<sup>th</sup> column for y &ne; z. A GMS term M can alternatively be abbreviated by replacing each column (z,y,x) with 1 if x = y and the replacement of its parent plus the number of ancestors of it, where an ancestor is its parent or a parent of another ancestor. For example, (0,0,0)(1,1,0)(2,1,0)(3,2,1)(4,2,0)(5,5,4)(6,6,6)(7,7,6)(8,7,6)(9,7,6)(10,7,6)(11,11,6) &rightarrow; 1,2,4,7,6,7,1,2,4,4,4,2.
   </p>
 </div>
 
